@@ -1,6 +1,6 @@
 ## This repository can be used to reproduce results from our paper [Towards Prioritizing GitHub Issues](https://dl.acm.org/doi/abs/10.1145/3385032.3385052)
 
-### Dataset
+### Section 5.1: Dataset
 
 The dataset of 1500 closed and 1500 open issues pulled from Tensorflow repository is available under `final/data` folder in pickle file format.
 
@@ -50,7 +50,7 @@ The followiing script reads dataset from the pickles, evaluates and prints the P
 python hotness.py
 ```
 
-### Section 5.3
+### Section 5.3 : Lifetime of te issue
 
 The following script measures classification accuracy of different classifiers on the task of predicting closing date for issues as presented in Table 5 of the paper.
 
