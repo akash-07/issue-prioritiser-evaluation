@@ -41,15 +41,6 @@ f.close()
 # Reads a list of State objects as defined in final/State.py
 ```
 
-Scripts used to scrape the dataset can be found under `final/data_retrieval`. Please add your GitHub authentication token and specify the number of pages to scrape in `final/data_retrieval/Config.py`. 100 issues are scraped per page. The default repository is set to `tensorflow` and issue state is set to `closed` which can also be changed from `Config.py`. Then run,
-
-```
-# within final folder
-python data_retrieval/Timeline.py 
-
-# This generates pickle files for issues and issue timelines. 
-````
-
 ### Section 5.2 : Hotness of the issue
 
 The followiing script reads dataset from the pickles, evaluates and prints the Pearson correlation coefficient and the Spearman correlation coefficient as descibed in Section 5.2 of the paper.
@@ -76,5 +67,26 @@ The following script generates the graph for issue lifetimes vs number of issues
 # within final folder
 python chart_close_dates.py
 ```
+
+### Generating issue categories
+
+The following scripts performs LDA on the whole corpus of issues and prints identified topics. It also prints topics and their associated scores for some sample issues.
+
+```
+# within final folder
+python lda.py
+
+```
+
+### Retrieving more data
+
+Scripts used to scrape the dataset can be found under `final/data_retrieval`. Please add your GitHub authentication token and specify the number of pages to scrape in `final/data_retrieval/Config.py`. 100 issues are scraped per page. The default repository is set to `tensorflow` and issue state is set to `closed` which can also be changed from `Config.py`. Then run,
+
+```
+# within final folder
+python data_retrieval/Timeline.py 
+
+# This generates pickle files for issues and issue timelines. 
+````
 
 
