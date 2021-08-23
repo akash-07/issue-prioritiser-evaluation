@@ -1,5 +1,13 @@
 ## This repository can be used to reproduce results from our paper [Towards Prioritizing GitHub Issues](https://dl.acm.org/doi/abs/10.1145/3385032.3385052)
 
+### Setting up python environment
+
+```
+python3 -m venv venv
+pip install -r requirements.txt
+source venv/bin/activate
+```
+
 ### Section 5.1: Dataset
 
 The dataset of 1500 closed and 1500 open issues pulled from Tensorflow repository is available under `final/data` folder in pickle file format.
