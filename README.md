@@ -14,6 +14,7 @@ issues = pickle.load(f)
 f.close()
 
 # issues is a JSON List consisting of `json` objects with the following keys (one per issue). 
+
 # number
 # id
 # created_at
@@ -40,10 +41,40 @@ f.close()
 # Reads a list of State objects as defined in final/State.py
 ```
 
-Scripts used to scrape the dataset can be found under `final/data_retrieval`. Please add your GitHub authentication token and specify the number of pages to scrape in `final/data_retrieval/Config.py`. 100 issues are scraped per page. The default repository is set to `tensorflow` and issue state is set to `closed` which can also be changed from `Config.py`. 
+Scripts used to scrape the dataset can be found under `final/data_retrieval`. Please add your GitHub authentication token and specify the number of pages to scrape in `final/data_retrieval/Config.py`. 100 issues are scraped per page. The default repository is set to `tensorflow` and issue state is set to `closed` which can also be changed from `Config.py`. Then run,
 
 ```
-python final/data_retrieval/Timeline.py 
+# within final folder
+python data_retrieval/Timeline.py 
 
-# This generate pickle files for issues and issue timelines. 
+# This generates pickle files for issues and issue timelines. 
 ````
+
+### Section 5.2 : Hotness of the issue
+
+The followiing script reads dataset from the pickles, evaluates and prints the Pearson correlation coefficient and the Spearman correlation coefficient as descibed in Section 5.2 of the paper.
+
+```
+# within final folder
+python hotness.py
+```
+
+### Section 5.3
+
+The following script measures classification accuracy of different classifiers on the task of predicting closing date for issues as presented in Table 5 of the paper.
+
+```
+# within final folder
+python predict_close_date.py
+```
+
+### Plot for issue lifetimes
+
+The following script generates the graph for issue lifetimes vs number of issues as presented in Figure-3 of the paper.
+
+```
+# within final folder
+python chart_close_dates.py
+```
+
+
