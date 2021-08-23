@@ -43,7 +43,7 @@ f.close()
 
 ### Section 5.2 : Hotness of the issue
 
-The followiing script reads dataset from the pickles, evaluates and prints the Pearson correlation coefficient and the Spearman correlation coefficient as descibed in Section 5.2 of the paper.
+The following script reads dataset from the pickles, evaluates and prints the Pearson correlation coefficient and the Spearman correlation coefficient as descibed in Section 5.2 of the paper.
 
 ```
 # within final folder
@@ -75,7 +75,6 @@ The following scripts performs LDA on the whole corpus of issues and prints iden
 ```
 # within final folder
 python lda.py
-
 ```
 
 ### Retrieving more data
